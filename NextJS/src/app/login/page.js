@@ -7,7 +7,6 @@ const Login = ()=>{
         <>
         <h1>Login page</h1>
         <button onClick={()=> router.push('/')}>GO to home page</button>
-        <button onClick={()=> router.push('/login/studentlogin')}>Go to student login portol</button>
         </>
     )
 }
