@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation'
 export default function Layout({ children }) {
     const pathname = usePathname();
-    console.log(pathname)
+
     return (
         <>
             {
@@ -18,6 +18,7 @@ export default function Layout({ children }) {
             <li><Link href='/login/teacherlogin'>telogin</Link></li>
           </ul>
           </div> : null}
+          
             {children}
         </>
     )
