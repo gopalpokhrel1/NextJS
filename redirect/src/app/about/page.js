@@ -1,8 +1,8 @@
-import { redirect } from "next/navigation"
+// import { redirect } from "next/navigation"
 
 export default function Page() {
 
-    redirect('/');
+    // redirect('/');
   return (
     <>
       <h1>Hello world</h1>
