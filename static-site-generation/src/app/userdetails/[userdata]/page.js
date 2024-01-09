@@ -34,10 +34,9 @@ export  async function generaStaticParams(){
 
     const currentData  = file.users;
 
-
-    {
-        currentData.map((item)=>({
+  
+   return   currentData.map((item)=>({
             userdata:item.id.toString()
         }))
-    }
+    
 }
