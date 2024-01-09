@@ -8,5 +8,5 @@ export function GET(req,content){
 
     const userData = data.find(p=>p.id==id);
 
-    return NextResponse.json(userData, {status:200});
+    return NextResponse.json(userData.length==0?{result:"not found"}: {result: userData}, {status:200});
 }
