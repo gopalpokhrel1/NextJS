@@ -20,3 +20,14 @@ export async function PUT(req, content){
 
     return NextResponse.json({result:payload});
 }
+
+export async function DELETE(req,content){
+    let id = content.params.id;
+
+    if(id){
+        return NextResponse.json({result:"Deleted"})
+    }
+    else{
+        return NextResponse.json({reult:"Not deleted"});
+    }
+}
