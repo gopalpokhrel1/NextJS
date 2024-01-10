@@ -11,14 +11,13 @@ export  function GET(){
 export async function POST(request){
      const payload = await request.json();
 
-     console.log(payload)
-     if(!payload.name || !payload.email || !payload.password){
+     if(!payload.fullname || !payload.email || !payload.password){
              
           return NextResponse.json({result:"Error"});
      
      }
      else{
-          return NextResponse.json({name:`${payload.name}`, password:`${payload.password}`, email:`${payload.email}`});
+          return NextResponse.json( {name:`${payload.fullname}`, password:`${payload.password}`, email:`${payload.email}`, status:true});
      }
 
      
