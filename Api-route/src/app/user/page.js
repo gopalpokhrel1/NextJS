@@ -17,7 +17,11 @@ export default  async function Page() {
         {
             file.map((item)=>{
                 return(
-                    <Link href={`/user/${item.id}`}>{item.name} <br /></Link> 
+                    <>
+                    <Link href={`/user/${item.id}`}>{item.name}</Link> 
+                    <span><Link href={`/user/${item.id}/update`}> Edit</Link></span> <br />
+                    </>
+                    
                 )
             }
             )
