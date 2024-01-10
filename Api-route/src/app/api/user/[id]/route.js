@@ -10,3 +10,14 @@ export function GET(req,content){
 
     return NextResponse.json(userData.length==0?{result:"not found"}: {result: userData}, {status:200});
 }
+
+
+export async function PUT(req, content){
+    let payload = await req.json();
+
+    payload.id=content.params.id;
+
+    console.log(payload)
+
+    return NextResponse.json({result:"Success"});
+}
