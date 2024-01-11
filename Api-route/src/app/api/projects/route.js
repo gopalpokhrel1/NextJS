@@ -6,9 +6,34 @@ import { NextResponse } from "next/server";
 
 export  async function GET() {
  
+  let data = [];
+
+  try{
     await mongoose.connect(connectSrt)
 
-    const data = await Products.find();
+     data = await Products.find();
 
-    return NextResponse.json({result:data});
+    
+  }
+  catch(err){
+    return NextResponse.json({success:false});
+  }
+
+  return NextResponse.json({result:data, success:true});
+}
+
+
+export async function POST(){
+    await mongoose.connect(connectSrt);
+
+    let product = new Products({
+        name:"Mahadev",
+        age:'30',
+        gender:'male',
+        faculty:'bca'
+    });
+
+    const result = await product.save();
+
+    return NextResponse.json({result, success:true});
 }
