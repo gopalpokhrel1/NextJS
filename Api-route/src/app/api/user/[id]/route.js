@@ -15,7 +15,6 @@ export function GET(req,content){
 export async function PUT(req, content){
     let payload = await req.json();
 
-    payload.id=content.params.id;
 
 
     return NextResponse.json({result:payload});
