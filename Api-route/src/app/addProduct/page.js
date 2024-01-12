@@ -18,7 +18,7 @@ export default function Page() {
     })
 
     data = await data.json();
-    console.log(data);
+  
   }
 
   return (
