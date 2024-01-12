@@ -23,15 +23,12 @@ export  async function GET() {
 }
 
 
-export async function POST(){
+export async function POST(request){
     await mongoose.connect(connectSrt);
 
-    let product = new Products({
-        name:"Mahadev",
-        age:'30',
-        gender:'male',
-        faculty:'bca'
-    });
+    const payload = await request.json();
+
+    let product = new Products(payload);
 
     const result = await product.save();
 
