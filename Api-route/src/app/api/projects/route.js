@@ -6,8 +6,8 @@ import { NextResponse } from "next/server";
 
 export  async function GET() {
  
-  let data = [];
 
+ let data = [];
   try{
     await mongoose.connect(connectSrt)
 
